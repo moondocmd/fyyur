@@ -38,12 +38,16 @@
 			<i class="fas fa-moon"></i> Not currently seeking performance venues
 		</p>
 		{% endif %}
+
 	</div>
+
 	<div class="col-sm-6">
 		<img src="{{ artist.image_link }}" alt="Venue Image" />
 	</div>
+
 </div>
 <section>
+
 	<h2 class="monospace">{{ artist.upcoming_shows_count }} Upcoming {% if artist.upcoming_shows_count == 1 %}Show{% else %}Shows{% endif %}</h2>
 	<div class="row">
 		{%for show in artist.upcoming_shows %}
@@ -70,6 +74,11 @@
 		</div>
 		{% endfor %}
 	</div>
+	<a href="/artists/{{ artist.id }}/edit">
+		<button class="btn btn-primary btn-lg" id="artist-edit-btn" data-id="{{ artist.id }}">
+		Edit Artist
+		</button>
+	</a>
 </section>
 
 {% endblock %}

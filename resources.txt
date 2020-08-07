@@ -1,0 +1,11 @@
+
+Python Flask Tutorial: Full-Featured Web App Part 4 - Database with Flask-SQLAlchemy
+
+****
+Group By in Flask-SQLAlchemy
+
+
+****WHEN PRIMARY KEY BECOMES OUT OF SYNC
+ALTER SEQUENCE "Venue_id_seq" RESTART WITH 5;
+
+SELECT MAX(id) FROM "Venue";
